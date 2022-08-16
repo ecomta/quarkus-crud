@@ -27,7 +27,6 @@ public class ClienteDTO {
     private Long categoria_id;
 
     public ClienteDTO() {
-
     }
 
     /*

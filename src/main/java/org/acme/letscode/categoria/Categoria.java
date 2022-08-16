@@ -18,7 +18,7 @@ public class Categoria extends PanacheEntityBase {
     @Column(nullable = false, updatable = false)
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @JsonbTransient
-    private Long id;
+    Long id;
 
     /*
      * Informações sobre Nome da tabela Categoria.
@@ -26,9 +26,13 @@ public class Categoria extends PanacheEntityBase {
     @Size(min = 5, max = 128, message = "Nome inválido. Digite um nome com no mínimo 5 caracteres.")
     @Column(nullable = false, length = 128)
     @NotBlank(message = "Nome inválido. Nome dá categoria não pode estar vazio.")
-    private String nome;
+    String nome;
 
     public Categoria() {}
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public void setNome(String nome) {
         this.nome = nome;
